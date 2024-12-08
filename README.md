@@ -10,6 +10,14 @@ install requirements
 ```
 pip install -r requirements.txt
 ```
+make an .env file to store the secrets
+```
+SERPER_API_KEY=ADD YOUR OWN
+BROWSERLESS_API_KEY=ADD YOUR OWN
+API_KEY=ADD YOUR OWN
+API_ENDPOINT=ADD YOUR OWN
+MODEL=ADD YOUR OWN
+```
 run it in cli 
 ```
 python main.py
