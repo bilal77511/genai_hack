@@ -104,3 +104,29 @@ class NewsTasks:
             """),
             agent=agent
         )
+
+    def verify_news_authenticity_task(self, agent, news_content):
+        return Task(
+            description=dedent(f"""
+                Analyze the following news content for authenticity:
+                {news_content}
+
+                Your tasks:
+                1. Cross-reference the information with multiple reliable sources
+                2. Check for signs of misinformation or fake news
+                3. Verify quotes, statistics, and claims
+                4. Analyze the credibility of sources
+                5. Check publication dates and timeline consistency
+                6. Look for manipulated media if mentioned
+                
+                Provide a detailed analysis including:
+                - Authenticity score (0-100%)
+                - Evidence supporting or refuting claims
+                - List of verified sources
+                - Red flags or inconsistencies found
+                - Recommendations for readers
+                
+                Format your response in a clear, structured manner.
+            """),
+            agent=agent
+        )

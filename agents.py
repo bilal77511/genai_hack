@@ -49,3 +49,16 @@ class NewsAgents():
             verbose=True,
             llm=self.llm
         )
+
+    def fake_news_detector_agent(self):
+        return Agent(
+            role='Fake News Detective',
+            goal='Analyze and verify news authenticity using multiple sources',
+            backstory="""You are an expert fact-checker and digital forensics specialist
+                        with years of experience in detecting misinformation and fake news.
+                        You use multiple reliable sources to cross-reference claims and
+                        provide detailed analysis of news authenticity.""",
+            tools=[SearchTools.search_internet, BrowserTools.scrape_and_summarize_website],
+            verbose=True,
+            llm=self.llm
+        )
